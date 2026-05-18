@@ -1,0 +1,253 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f8fafc;
+  color:#1e293b;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 8%;
+
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(12px);
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+  text-decoration:none;
+  font-size:2rem;
+  font-weight:700;
+  color:#e11d48;
+}
+
+.back-btn{
+  text-decoration:none;
+  background:#e11d48;
+  color:white;
+  padding:12px 22px;
+  border-radius:12px;
+  font-weight:500;
+  transition:0.3s ease;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(225,29,72,0.25);
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.page-hero{
+  text-align:center;
+  padding:80px 8% 50px;
+}
+
+.page-hero h1{
+  font-size:3rem;
+  margin-bottom:15px;
+  color:#0f172a;
+}
+
+.page-hero p{
+  max-width:700px;
+  margin:auto;
+  color:#64748b;
+  line-height:1.8;
+  font-size:1.05rem;
+}
+
+/* ==========================
+   PRODUCT SECTION
+========================== */
+
+.products{
+  padding:50px 8% 90px;
+}
+
+.product-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:35px;
+}
+
+.product-card{
+  background:white;
+  border-radius:28px;
+  overflow:hidden;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,0.08);
+
+  transition:0.35s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+}
+
+.product-card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+.product-content{
+  padding:24px;
+}
+
+.product-content h3{
+  font-size:1.4rem;
+  margin-bottom:12px;
+  color:#0f172a;
+}
+
+.product-content p{
+  color:#64748b;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+/* Price */
+
+.price{
+  display:inline-block;
+  font-size:1.3rem;
+  font-weight:700;
+  color:#e11d48;
+  margin-bottom:18px;
+}
+
+/* Button */
+
+.buy-btn{
+  width:100%;
+  border:none;
+  padding:14px;
+
+  background:linear-gradient(
+    135deg,
+    #e11d48,
+    #fb7185
+  );
+
+  color:white;
+  border-radius:14px;
+
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.buy-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(225,29,72,0.25);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+}
+
+.footer h3{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.footer p{
+  opacity:0.9;
+  margin-top:8px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+  .page-hero h1{
+    font-size:2.5rem;
+  }
+
+  .product-card img{
+    height:260px;
+  }
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+  }
+
+  .page-hero{
+    padding:60px 6% 30px;
+  }
+
+  .page-hero h1{
+    font-size:2rem;
+  }
+
+  .page-hero p{
+    font-size:1rem;
+  }
+
+  .products{
+    padding:30px 6% 70px;
+  }
+
+  .product-card img{
+    height:230px;
+  }
+}
+
+@media(max-width:480px){
+
+  .logo{
+    font-size:1.7rem;
+  }
+
+  .page-hero h1{
+    font-size:1.8rem;
+  }
+
+  .back-btn{
+    width:100%;
+    text-align:center;
+  }
+}
